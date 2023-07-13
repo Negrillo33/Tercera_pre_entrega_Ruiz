@@ -37,3 +37,12 @@ urlpatterns = [
     path('', my_view, name='mantenimiento'),
 ]
 
+from django.urls import path
+from myapp.views import InsercionView, BuscarView
+
+urlpatterns = [
+    path('insertar/', InsercionView.as_view(), name='insertar'),
+    path('buscar/', BuscarView.as_view(), name='buscar'),
+]
+
+
