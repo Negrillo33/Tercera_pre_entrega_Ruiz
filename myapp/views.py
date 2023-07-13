@@ -11,6 +11,11 @@ def my_view(request):
     return HttpResponse("Lo sentimos! La pagina web a la que intenta ingresar esta en mantenimiento en estos momentos")
 # pongo el return con un cartel en mantenimiento porque no logro hacer que el menu funcione y prefiero eso a que no se visualice nada 
 
+class BuscarView(View):
+    def get(self, request):
+        return render(request, 'buscar.html')
+
+
 
 class MenuView(View):
     def get(self, request):
